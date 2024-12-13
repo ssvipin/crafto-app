@@ -1,0 +1,89 @@
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 10px 20px;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0a66c2;
+  cursor: pointer;
+}
+
+.navbar-hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: max-height 0.3s ease-out;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #0a66c2;
+}
+
+/* Profile Dropdown */
+.navbar-links > div {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar-hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar-links.open {
+    max-height: 300px; /* Adjust as needed */
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
